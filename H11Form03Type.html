@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2>form태그의 하위요소가 되는 태그들</h2>
+    <h3>type="checkbox"</h3>
+    <!-- fieldset 하위의 legend 태그 : 주로 설문의 항목이나 시험문제 등을 표현할 때 사용하는
+        태그로 Block Element이다. -->
+    <!-- input 태그의 checkbox, radio 속성이 부여되는 경우에는 반드시 value 속성 값을
+        미리 입력해 놓아야 한다. 해당 속성은 단순히 선택만 가능하고 값을 입력하는 기능은
+        없기 때문이다.
+        또한 하나의 그룹으로 만들기 위해 동일한 name 속성값을 가진다. 그리고 선택한 항목의
+        value만 서버로 전송된다. -->
+    <fieldset>
+        <legend>먹고 싶은거 다 고르세요</legend>
+        <form> 
+            <!-- 체크박스의 경우 미리 value가 입력된 상태이므로 값의 유무는 중요하지 않고,
+                선택이 된 상태인지가 중요하다. 미리 체크를 해두려면 checked 속성을 사용한다. -->
+            <input type="checkbox" name="china" value="1">
+                짜장면 <img src="./images/jajang.png">
+            <input type="checkbox" name="china" value="2" checked>
+                짬뽕 <img src="./images/jjambbong.png"> 
+            <input type="checkbox" name="china" value="1">
+                탕수육 <img src="./images/tangsuyuk.png">
+            <input type="submit" value="전송하기">
+        </form> 
+    </fieldset>
+
+
+    <h3>type="radio"</h3>
+    <!-- radio는 checkbox와 기본적인 속성은 동일하지만 여러 항목 중 딱 한개만
+        선택할 수 있는 특징이 있다. -->
+    <filedset>
+        <legend>먹고 싶은 것중 하나만 고르세요.</legend>
+        <form>
+            <input type="radio" name="chinaFood" value="1">
+                짜장면 <img src="./images/jajang.png">
+            <input type="radio" name="chinaFood" value="2" checked>
+                짬뽕 <img src="./images/jjambbong.png"> 
+            <input type="radio" name="chinaFood" value="3">
+                탕수육 <img src="./images/tangsuyuk.png">
+            <input type="submit" value="전송하기">
+        </form>
+    </filedset>
+
+    
+    <h3>select태그 - 여러개 선택</h3>
+    <fieldset>
+        <legend>당신이 좋아하는 걸그룹은?(다중선택가능)</legend>
+        <form>
+            <select name="girlGroup" multiple size="5">
+                <option value="T">트와이스</option>
+                <option value="M">모모랜드</option>
+                <option value="R">레드밸벳</option>
+                <option value="G">여자친구</option>
+                <option value="B">블랙핑크</option>
+            </select>
+            <input type="submit" value="전송하기">
+        </form>
+    </fieldset>
+</body>
+</html>
