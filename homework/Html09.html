@@ -19,7 +19,11 @@
                 <option value="dotted">점선</option>
             </select>
             <br>
-            선색 <input type="color" name="color" onchange="document.getElementById('myColor').style.color=this.value">
+            선두께 <input type="text" name="border" id="border" min="1" max="20" size="3">
+            선색 <input type="color" name="color" 
+                onchange="document.getElementById('myColor').style.color=this.value">
+            <br>
+            투명도(0~100) : <input type="range" min="1" max="20" value="10">
         </form>
     </fieldset>
 
